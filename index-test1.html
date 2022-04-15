@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EPL-NFT-Ticket</title>
+	<script src="config.js"></script>
+	<script src="mintScript.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<style>
+		body{
+			background-image: url();
+			
+		}
+		.left-box {
+		  height: auto;
+		  float: left;
+		  width: 50%;
+		}
+		.right-box {
+		  margin-top: 30px;
+		  height: auto;
+		  float: right;
+		  width: 50%;
+		}
+		div{
+			
+			width: 100%;
+			
+		}
+	
+	</style>
+
+</head>
+
+
+<body>
+<div class="back">
+
+</div>
+
+<div class="left-box" >
+	<link rel="stylesheet" href="style.css">
+	<br>
+	<p ><span style="border-radius: 15px 15px 15px 0;
+	 border: 3px solid #278f88; padding: 0.5em 0.6em; color: #0a0a0a; font-weight: bold">MINTING INFO</span></p>
+	<p id="blockNubmer" style="color:#0a0a0a; font-weight: bold">현재 블록: #00000000</p>
+	<p id="mintStartBlockNumber" style="color:#0a0a0a; font-weight: bold">민팅 시작 블록: #00000000</p>
+	
+	<p id="mintPrice" style="color:#0a0a0a; font-weight: bold">티켓 가격: 0 KLAY</p>
+	<p id="mintLimitPerBlock" style="color:#0a0a0a; font-weight: bold">트랜잭션당 최대 수량: 0개</p>
+	<hr width="30%"align="center" style="border: solid rgb(180, 200, 188) ; ">
+	<a href="https://scope.klaytn.com/">(Klaytnscope)</a><br>
+	<a href="https://klayswap.com/">(Klayswap)</a><br>
+	<a href="https://testnets.opensea.io/">(OpenSea-Testnets)</a><br>
+
+	<br>
+	<p><span style="border-radius: 15px 15px 15px 0;
+	border: 3px solid #278f88; padding: 0.5em 0.6em; color: #080808; font-weight: bold">MY WALLET<span></p>
+	<p id="myWallet" style="color:#0a0a0a; font-weight: bold">지갑주소: 연결되지 않음</p>
+	
+
+	<p id="myKlay" style="color:#0a0a0a; font-weight: bold;">잔액: 연결되지 않음</p>
+	<button class="custom-btn btn-15"
+	 onclick="connect()">CONNECT</button>
+	 <hr width="30%"align="center" style="border: solid rgb(180, 200, 188) ; ">
+	<p><span style="border-radius: 15px 15px 15px 0;
+		border: 3px solid #278f88; padding: 0.5em 0.6em; color: #060606; font-weight: bold">MINT</span></p>
+	<p style="color: #060606; font-weight: bold" id="mintCnt">0 / 0</p>
+	<label for="amount" style="color:#0a0a0a; font-weight: bold; font-size: large;">티켓 희망 수량 (최대 2개)</label><br>
+	<input type="number" style="color: #060606;" id="amount" name="amount" min="1" max="3" value="1" ><br>
+
+	<button class="custom-btn btn-15"
+	onclick="publicMint()">BUY</button>
+	
+	<script>
+		document.addEventListener("DOMContentLoaded", async function (event) {
+			const accounts = await klaytn.enable();
+			if (!accounts) {
+				alert("KaiKas 확장 프로그램을 활성화 해주세요!");
+			}
+			check_status();
+		});
+	</script>
+</div>
+<div class="right-box">
+
+</div>
+<div class="right-box">
+	<div class="scene">
+		<div class="box">
+		  <div class="box__face box__face--front"><img src="images/redT.png" width="100%" ></div>
+		  <div class="box__face box__face--back"><img src="images/redT.png" width="100%" ></div>
+
+		</div>
+	  </div> </div>
+<div class="right-box">
+	<br>
+	<div class="scene">
+		<div class="box">
+		  <div class="box__face box__face--front"><img src="images/greenT.png" width="100%" ></div>
+		  <div class="box__face box__face--back"><img src="images/greenT.png" width="100%" ></div>
+
+		</div>
+		
+	</div>
+	<img src="images/토트넘 로고.png" width="10%" vspace="50" hspace="50">
+	<img src="images/리버풀 로고.png " width="25%"  vspace="50" hspace="50">
+	<br><br>
+	
+
+</div>			
+
+</body>
+
+</html>

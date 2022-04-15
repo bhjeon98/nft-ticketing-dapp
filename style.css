@@ -1,0 +1,298 @@
+/* 링크 */
+  a:link {
+    color : rgb(49, 14, 227);
+    text-decoration: none;
+  }
+  a:visited {
+    color : rgb(240, 19, 7);
+    text-decoration: none;
+  }
+  a:hover {
+    color : rgb(105, 8, 79);
+    text-decoration: underline;
+  }
+  a:active {
+    color : green;
+    text-decoration: none;
+  }
+
+  /* 배경  
+  :root {
+      
+    --button-bg: #8522c7;
+    --button-active-bg: #681d9b;
+    --small-button-bg: #919191;
+    --small-button-active-bg: #646464;
+    --button-text: #ffffff;
+    --card: #ffffff;
+    --accountText: #ffffff;
+    --statusText: #470068;
+    --bg-gradient_1: rgb(162, 196, 240);
+    --bg-gradient_2: rgb(240, 162, 217);
+    --gradient_1: rgb(83, 152, 243);
+    --gradient_2: rgb(236, 71, 214);
+    --gradient_3: rgb(241, 204, 80);
+    --success: #24a13f;
+    --warning: #ca5824;
+    --error: #ca2f24;
+  }
+html,
+body {
+
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(
+      var(--bg-gradient_1) 0%,
+      var(--bg-gradient_2) 100%
+    )
+    fixed;
+}
+
+.colorGradient {
+  background: linear-gradient(
+      to bottom,
+      var(--gradient_1) 0%,
+      var(--gradient_2) 65%,
+      var(--gradient_3) 100%
+    )
+    fixed;
+} 
+
+/* 화면 반 나누기 */
+.left-box{
+    text-align: center;
+}
+.right-box{
+    text-align: center;
+} 
+
+
+/* 버튼, 배경이미지 */
+body {
+   background-image: url('images/backopacity.jpg');
+   background-repeat: no-repeat;
+   background-size:  auto ;
+   background-position: center top;
+   height: 100vh;
+   
+  }
+  h1 {
+    position: relative;
+    text-align: center;
+    color: #353535;
+    font-size: 50px;
+    font-family: "Cormorant Garamond", serif;
+  }
+  
+  p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 18px;
+    color: #676767;
+  }
+  .frame {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+  }
+  button {
+    margin: 20px;
+  }
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+ 
+  .btn-15 {
+    background: #278f88;
+    border: none;
+    z-index: 1;
+  }
+  .btn-15:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #ddece387;
+    border-radius: 5px;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+  }
+  .btn-15:hover {
+    color: #fff;
+  }
+  .btn-15:hover:after {
+    left: 0;
+    width: 100%;
+  }
+  .btn-15:active {
+    top: 2px;
+  }
+
+  /* 3d box */
+  .scene {
+  margin: auto;
+  width: 450px;
+  height: 200px;
+  perspective: 10000px;
+}
+
+.box {
+  
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-50px) rotate3d(0, 0, 0);
+  -webkit-animation: rotation 10s infinite;
+          animation: rotation 10s infinite;
+}
+
+.box__face {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5em;
+  font-family: monospace;
+  opacity: 0;
+}
+.box__face--front {
+  opacity: 1;
+  top: 50px;
+  width: 450px;
+  height: 110px;
+  
+  transform: rotateY(0deg) translateZ(0px);
+}
+.box__face--back {
+  opacity: 0.5;
+  top: 50px;
+  width: 450px;
+  height: 110px;
+  background: #AB7E5F;
+  transform: rotateY(180deg) translateZ(10px);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  
+  flex-direction: column;
+  justify-content: right;
+  align-items: right;
+  
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+@-webkit-keyframes rotation {
+  100% {
+    transform: translateZ(0px) rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes rotation {
+  100% {
+    transform: translateZ(0px) rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+/* 박스2 */
+.scene {
+  margin: auto;
+  width: 450px;
+  height: 200px;
+  perspective: 10000px;
+}
+
+.box2 {
+  
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-50px) rotate3d(0, 0, 0);
+  -webkit-animation: rotation 10s infinite;
+          animation: rotation 10s infinite;
+}
+
+.box2__face {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5em;
+  font-family: monospace;
+  opacity: 0;
+}
+.box2__face--front {
+  opacity: 0.5;
+  top: 50px;
+  width: 450px;
+  height: 110px;
+  
+  transform: rotateY(0deg) translateZ(0px);
+}
+.box2__face--back {
+  opacity: 1;
+  top: 50px;
+  width: 450px;
+  height: 110px;
+  background: #AB7E5F;
+  transform: rotateY(180deg) translateZ(10px);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  
+  flex-direction: column;
+  justify-content: right;
+  align-items: right;
+  
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+@-webkit-keyframes rotation {
+  100% {
+    transform: translateZ(0px) rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes rotation {
+  100% {
+    transform: translateZ(0px) rotate3d(0, 1, 0, 360deg);
+  }
+}
